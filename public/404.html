@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - DevOps Bootcamp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Oops! Page Not Found</h2>
+            <p>The page you're looking for doesn't exist. Maybe it's been moved or you typed the wrong URL.</p>
+            <a href="/" class="cta-button">
+                <i class="fas fa-home"></i>
+                Go Back Home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive elements to the 404 page
+        document.addEventListener('DOMContentLoaded', function() {
+            const errorContent = document.querySelector('.error-content');
+            
+            // Add a subtle animation
+            errorContent.style.opacity = '0';
+            errorContent.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                errorContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                errorContent.style.opacity = '1';
+                errorContent.style.transform = 'translateY(0)';
+            }, 100);
+
+            // Add a fun console message
+            console.log(`
+            🚨 404 Error Detected!
+            
+            Don't worry, even the best DevOps engineers make mistakes sometimes.
+            This is just a demo application, but in production, you'd want to:
+            - Set up proper error monitoring
+            - Log this error for analysis
+            - Redirect users to helpful pages
+            
+            Keep learning and building! 🚀
+            `);
+        });
+    </script>
+</body>
+</html>
